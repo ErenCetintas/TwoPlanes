@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8733635681934174559}
   - component: {fileID: 8733635681934174556}
   - component: {fileID: 8733635681934174557}
+  - component: {fileID: 7721640931728362140}
   m_Layer: 0
   m_Name: Square Red
   m_TagString: Square
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8733635681934174552}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -143,5 +144,17 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7721640931728362140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733635681934174552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79eb6faa2011e8c43982dd5e2245a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
