@@ -23,18 +23,18 @@ public class MovementScript : MonoBehaviour
     {
          if(LeftPlaneControl){
              if(FirstLaneLeftPlane){
-                transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.y,transform.position.y,0),.05f);
+                transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.y,transform.position.y,0),.1f);
              }
              else{
-                transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.x,transform.position.y,0),.05f); 
+                transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.x,transform.position.y,0),.1f); 
              }
 
          }else{
              if(FirstLaneRightPlane){
-                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.y,transform.position.y,0),.05f);
+                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.y,transform.position.y,0),.1f);
              }
              else{
-                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.x,transform.position.y,0),.05f); 
+                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.x,transform.position.y,0),.1f); 
              }
          }      
     }
