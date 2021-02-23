@@ -19,7 +19,7 @@ public class MovementScript : MonoBehaviour
     }
 
    
-    void Update()
+    void FixedUpdate()
     {
          if(LeftPlaneControl){
              if(FirstLaneLeftPlane){
