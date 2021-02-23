@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CircleSquare : MonoBehaviour
 {
-    int speed;
+    public static float speed = 6;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -13,10 +13,10 @@ public class CircleSquare : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        speed=10;
+    void FixedUpdate()
+    {   
         rb=GetComponent<Rigidbody2D>();
         rb.velocity=new Vector2(0,-speed);
+        Debug.Log(speed);
     }
 }

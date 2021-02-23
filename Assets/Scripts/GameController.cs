@@ -23,7 +23,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(CircleSquare.speed<12){
+            CircleSquare.speed += CircleSquare.speed*0.0001f;
+        }else{
+            CircleSquare.speed=12;
+        }
     }
     IEnumerator SpawnObjects(){
         yield return new WaitForSeconds(startWait);

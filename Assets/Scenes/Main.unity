@@ -5579,7 +5579,7 @@ MonoBehaviour:
   - {fileID: 4341522643007108615, guid: 11295802979ba754e8093b484a596809, type: 3}
   - {fileID: 6051987218794600464, guid: cb34a80cba8fbab42a64ddfbe8afa9d3, type: 3}
   startWait: 2
-  spawnWait: 1
+  spawnWait: 0.5
 --- !u!4 &820665272
 Transform:
   m_ObjectHideFlags: 0
