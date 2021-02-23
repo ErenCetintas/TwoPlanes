@@ -5,38 +5,57 @@ using UnityEngine.UI;
 
 public class MovementScript : MonoBehaviour
 {
-    /*public GameObject LeftPlane;
-    public GameObject RightPlane;*/
-
     public Vector2 Xpos;
     
     public bool FirstLaneRightPlane, FirstLaneLeftPlane;
     public bool LeftPlaneControl;
     
+    float rotZ=15;
+
     void Start()
     {
         
     }
 
-   
     void FixedUpdate()
     {
          if(LeftPlaneControl){
              if(FirstLaneLeftPlane){
                 transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.y,transform.position.y,0),.1f);
+                if(transform.position.x>= -1.3f){
+                transform.rotation = Quaternion.Euler(0,0,0);
+                }else{
+                transform.rotation = Quaternion.Euler(0,0,-rotZ);
+                }
              }
              else{
                 transform.position = Vector3.Lerp(transform.position,new Vector3(-Xpos.x,transform.position.y,0),.1f); 
+                if(transform.position.x<= -2.7f){
+                transform.rotation = Quaternion.Euler(0,0,0);
+                }else{
+                transform.rotation = Quaternion.Euler(0,0,rotZ);
+                }
              }
 
          }else{
              if(FirstLaneRightPlane){
                 transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.y,transform.position.y,0),.1f);
+                if(transform.position.x<=1.3f){
+                transform.rotation = Quaternion.Euler(0,0,0);
+                }else{
+                transform.rotation = Quaternion.Euler(0,0,rotZ);
+                }
              }
              else{
-                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.x,transform.position.y,0),.1f); 
+                transform.position = Vector3.Lerp(transform.position,new Vector3(Xpos.x,transform.position.y,0f),.1f); 
+                if(transform.position.x>=2.7f){
+                transform.rotation = Quaternion.Euler(0,0,0);
+                }else{
+                transform.rotation = Quaternion.Euler(0,0,-rotZ);
+                }
              }
-         }      
+         } 
+             
     }
 
     public void LeftButton(){
