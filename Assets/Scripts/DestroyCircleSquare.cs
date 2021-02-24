@@ -12,12 +12,12 @@ public class DestroyCircleSquare : MonoBehaviour
         if(other.gameObject.tag == "Destroyer"){
             Destroy(this.gameObject);
             if(this.gameObject.tag == "RedSquare"){
-                Instantiate(RedCrashDestroyEffect, transform.position, transform.rotation);
-                Destroy(RedCrashDestroyEffect,1f);
+                GameObject objectToDestroy = Instantiate(RedCrashDestroyEffect, transform.position, transform.rotation);
+                Destroy(objectToDestroy,1);
             }
             if(this.gameObject.tag == "BlueSquare"){
-                Instantiate(BlueCrashDestroyEffect, transform.position, transform.rotation);
-                Destroy(BlueCrashDestroyEffect,1f);
+                GameObject objectToDestroy = Instantiate(BlueCrashDestroyEffect, transform.position, transform.rotation);
+                Destroy(objectToDestroy,1);
             }
         }
 
