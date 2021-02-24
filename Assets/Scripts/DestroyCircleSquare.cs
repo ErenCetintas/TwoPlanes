@@ -10,20 +10,35 @@ public class DestroyCircleSquare : MonoBehaviour
     public GameObject RedCrashEffect;
     public GameObject BlueCrashEffect;
 
+    public static bool endGame;
+
+    void Start(){
+        
+    }
     
     void OnTriggerEnter2D(Collider2D other)
     {
         //destroy gameobject---------
         if(other.gameObject.tag == "Destroyer"){
-            Destroy(this.gameObject);
+            //square destroyer
             if(this.gameObject.tag == "RedSquare"){
+                Destroy(this.gameObject);
+                //effect
                 GameObject objectToDestroy = Instantiate(RedCrashDestroyEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
             }
             if(this.gameObject.tag == "BlueSquare"){
+                Destroy(this.gameObject);
+                //effect
                 GameObject objectToDestroy = Instantiate(BlueCrashDestroyEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
             }
+            //endGame control
+            if(this.gameObject.tag == "CircleRed" || this.gameObject.tag == "CircleBlue"){
+                endGame=true;
+                Time.timeScale=0;
+            }
+
         }
         //endGame control
         if(other.gameObject.tag == "Plane"){
