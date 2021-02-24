@@ -10,6 +10,8 @@ public class DestroyCircleSquare : MonoBehaviour
     public GameObject RedCrashEffect;
     public GameObject BlueCrashEffect;
 
+    public GameObject endGameEffect;
+
     public static bool endGame;
 
     void Start(){
@@ -36,7 +38,9 @@ public class DestroyCircleSquare : MonoBehaviour
             //endGame control
             if(this.gameObject.tag == "CircleRed" || this.gameObject.tag == "CircleBlue"){
                 endGame=true;
+                Instantiate(endGameEffect, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
                 Time.timeScale=0;
+
             }
 
         }

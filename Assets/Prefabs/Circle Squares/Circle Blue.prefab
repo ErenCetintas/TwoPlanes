@@ -103,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3a417d39b84d05e4098fc53580df2cc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -152,3 +152,4 @@ MonoBehaviour:
   BlueCrashDestroyEffect: {fileID: 6932922452967664819, guid: 717b5ee85d9afd545b04aedf68d31259, type: 3}
   RedCrashEffect: {fileID: 6932922452967664819, guid: 17af461bea3322942afab1ae63073997, type: 3}
   BlueCrashEffect: {fileID: 6932922452967664819, guid: 717b5ee85d9afd545b04aedf68d31259, type: 3}
+  endGameEffect: {fileID: 6932922452967664819, guid: 66fc1ca611d5b854c91feb8087817d20, type: 3}
