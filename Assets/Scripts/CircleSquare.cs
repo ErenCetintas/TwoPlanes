@@ -17,6 +17,7 @@ public class CircleSquare : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {   
+        //test
         rb=GetComponent<Rigidbody2D>();
         rb.velocity=new Vector2(0,-speed);
         Debug.Log(speed);
