@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(CircleSquare.speed<12){
             CircleSquare.speed += CircleSquare.speed*0.0001f;

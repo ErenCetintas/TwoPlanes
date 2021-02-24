@@ -11,15 +11,14 @@ public class CircleSquare : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Application.targetFrameRate = 60;
+        rb=GetComponent<Rigidbody2D>();
+        rb.velocity = -transform.up * speed;
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {   
-        //test
-        rb=GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-speed);
         Debug.Log(speed);
     }
 }
