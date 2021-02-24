@@ -9,6 +9,8 @@ public class MovementScript : MonoBehaviour
     
     public bool FirstLaneRightPlane, FirstLaneLeftPlane;
     public bool LeftPlaneControl;
+
+    public GameObject touchPlaneEffect;
     
     float rotZ=15;
 
@@ -64,6 +66,7 @@ public class MovementScript : MonoBehaviour
         }else{
             FirstLaneLeftPlane=true;
         }
+        Instantiate(touchPlaneEffect, new Vector3(transform.position.x,transform.position.y-1,transform.position.z), transform.rotation);
     }
 
     public void RightButton(){
@@ -72,6 +75,7 @@ public class MovementScript : MonoBehaviour
         }else{
             FirstLaneRightPlane=true;
         }
+        Instantiate(touchPlaneEffect, new Vector3(transform.position.x,transform.position.y-1,transform.position.z), transform.rotation);
     }
 }
 
