@@ -160,3 +160,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedCrashDestroyEffect: {fileID: 6932922452967664819, guid: 17af461bea3322942afab1ae63073997, type: 3}
   BlueCrashDestroyEffect: {fileID: 6932922452967664819, guid: 717b5ee85d9afd545b04aedf68d31259, type: 3}
+  RedCrashEffect: {fileID: 6932922452967664819, guid: e08927a4a3b8f5a4b85e01e5346aa67c, type: 3}
+  BlueCrashEffect: {fileID: 6932922452967664819, guid: 4612feba08d339743aab105a791d7552, type: 3}

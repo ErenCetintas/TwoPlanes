@@ -9,6 +9,9 @@ TagManager:
   - Destroyer
   - RedSquare
   - BlueSquare
+  - Plane
+  - CircleRed
+  - CircleBlue
   layers:
   - Default
   - TransparentFX
