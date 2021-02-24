@@ -17,11 +17,8 @@ public class CircleSquare : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-       
-        //speed = Time.time*speed;
         rb=GetComponent<Rigidbody2D>();
         rb.velocity=new Vector2(0,-speed);
-        
         Debug.Log(speed);
     }
 }

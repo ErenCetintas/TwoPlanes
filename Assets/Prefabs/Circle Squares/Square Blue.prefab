@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -9171082775451386005}
   m_Layer: 0
   m_Name: Square Blue
-  m_TagString: Square
+  m_TagString: BlueSquare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,3 +158,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79eb6faa2011e8c43982dd5e2245a94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedCrashDestroyEffect: {fileID: 6932922452967664819, guid: 17af461bea3322942afab1ae63073997, type: 3}
+  BlueCrashDestroyEffect: {fileID: 6932922452967664819, guid: 717b5ee85d9afd545b04aedf68d31259, type: 3}
