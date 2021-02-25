@@ -20,8 +20,19 @@ public class DestroyCircleSquare : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        //destroy gameobject---------
-        if(other.gameObject.tag == "Destroyer"){
+            //destroy gameobject---------
+            if(other.gameObject.tag == "Destroyer"){
+            DestroyEnemy(other);
+            }
+            //endGame control----------
+            if(other.gameObject.tag == "Plane"){
+            GetPoints(other);
+            }
+        
+        
+    }
+    void DestroyEnemy (Collider2D other){
+        
             //square destroyer
             if(this.gameObject.tag == "RedSquare"){
                 Destroy(this.gameObject);
@@ -40,12 +51,10 @@ public class DestroyCircleSquare : MonoBehaviour
                 endGame=true;
                 Instantiate(endGameEffect, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
                 Time.timeScale=0;
-
             }
-
-        }
-        //endGame control
-        if(other.gameObject.tag == "Plane"){
+        
+    }
+    void GetPoints (Collider2D other){
             //endGame control----------
             if(this.gameObject.tag == "RedSquare"){
                 Destroy(this.gameObject);
@@ -67,17 +76,15 @@ public class DestroyCircleSquare : MonoBehaviour
                 GameObject objectToDestroy = Instantiate(RedCrashEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
                 //get points----
-                ScoreManager.score = ScoreManager.score + 20;
+                ScoreManager.score = ScoreManager.score + 1;
             }
             if(this.gameObject.tag == "CircleBlue"){
                 Destroy(this.gameObject);
                 GameObject objectToDestroy = Instantiate(BlueCrashEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
                 //get points----
-                ScoreManager.score = ScoreManager.score + 20;
+                ScoreManager.score = ScoreManager.score + 1;
             }
-        }
-
-
+        
     }
 }
