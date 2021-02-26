@@ -15,19 +15,20 @@ public class DestroyCircleSquare : MonoBehaviour
     public static bool endGame;
 
     void Start(){
-        
+        endGame=false;
     }
     
     void OnTriggerEnter2D(Collider2D other)
     {
-            //destroy gameobject---------
-            if(other.gameObject.tag == "Destroyer"){
+        
+        //destroy gameobject---------
+        if(other.gameObject.tag == "Destroyer"){
             DestroyEnemy(other);
-            }
-            //endGame control----------
-            if(other.gameObject.tag == "Plane"){
+        }
+        //endGame control----------
+        if(other.gameObject.tag == "Plane"){
             GetPoints(other);
-            }
+        }
         
         
     }
@@ -60,15 +61,15 @@ public class DestroyCircleSquare : MonoBehaviour
                 Destroy(this.gameObject);
                 GameObject objectToDestroy = Instantiate(RedCrashEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
-                //time control----
-                //Time.timeScale=0;
+                endGame=true;
+                Time.timeScale=0;
             }
             if(this.gameObject.tag == "BlueSquare"){
                 Destroy(this.gameObject);
                 GameObject objectToDestroy = Instantiate(BlueCrashEffect, transform.position, transform.rotation);
                 Destroy(objectToDestroy,1);
-                //time control----
-                //Time.timeScale=0;
+                endGame=true;
+                Time.timeScale=0;
             }
             //get points counter---------
             if(this.gameObject.tag == "CircleRed"){
