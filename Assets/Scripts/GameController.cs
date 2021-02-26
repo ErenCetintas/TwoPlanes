@@ -23,12 +23,13 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("spawnWait:"+spawnWait);
+        Debug.Log("spawnWait : "+spawnWait);
+        Debug.Log("speed : "+CircleSquare.speed);
+
         if(DestroyCircleSquare.endGame==false){
-            if(CircleSquare.speed<12){
+            if(CircleSquare.speed<=12){
                 CircleSquare.speed += CircleSquare.speed* 0.001f;
                 spawnWait -= spawnWait * 0.0005f;
-                //Debug.Log("spawnWait:"+spawnWait);
             }else{
                 CircleSquare.speed = 12;
                 spawnWait = 0.3f;

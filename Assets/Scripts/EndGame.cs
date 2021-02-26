@@ -18,6 +18,7 @@ public class EndGame : MonoBehaviour
 	void Start ()
 	{	
 		endGameCanvas.SetActive(false);
+		DestroyCircleSquare.endGame = false;
 		//get last best score
 		bestScore = PlayerPrefs.GetInt("bestScore");
 	}
@@ -43,7 +44,7 @@ public class EndGame : MonoBehaviour
 		scoreText.text = "" + ScoreManager.score;
 		bestText.text = "" + bestScore;
 
-		DestroyCircleSquare.endGame = false;
+		
 
 	}
 	public void RestartButton(){
