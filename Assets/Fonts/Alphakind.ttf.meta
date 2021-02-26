@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a92a0da95b4ab34fb6c6607f58e1398
+guid: 6e7b6c616b9bcf441b0ae655e8bf0a89
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - White On Black
+  - Alphakind
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
