@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnObjects());
+        DestroyCircleSquare.endGame = false;
     }
 
     // Update is called once per frame
@@ -37,7 +38,6 @@ public class GameController : MonoBehaviour
         }else{
             CircleSquare.speed = 6;
             spawnWait = 1f;
-
         }
     }
     IEnumerator SpawnObjects(){
