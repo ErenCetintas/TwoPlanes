@@ -24,13 +24,19 @@ public class GameController : MonoBehaviour
     void Update()
     {
         Debug.Log("spawnWait:"+spawnWait);
-        if(CircleSquare.speed<12){
-            CircleSquare.speed += CircleSquare.speed* 0.001f;
-            spawnWait -= spawnWait * 0.0005f;
-            //Debug.Log("spawnWait:"+spawnWait);
+        if(DestroyCircleSquare.endGame==false){
+            if(CircleSquare.speed<12){
+                CircleSquare.speed += CircleSquare.speed* 0.001f;
+                spawnWait -= spawnWait * 0.0005f;
+                //Debug.Log("spawnWait:"+spawnWait);
+            }else{
+                CircleSquare.speed = 12;
+                spawnWait = 0.3f;
+            }
         }else{
-            CircleSquare.speed = 12;
-            spawnWait = 0.3f;
+            CircleSquare.speed = 6;
+            spawnWait = 1f;
+
         }
     }
     IEnumerator SpawnObjects(){
