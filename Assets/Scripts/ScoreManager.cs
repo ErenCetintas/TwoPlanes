@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
@@ -21,4 +22,5 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "" + score;
         Debug.Log("score : "+score);
     }
+    
 }
