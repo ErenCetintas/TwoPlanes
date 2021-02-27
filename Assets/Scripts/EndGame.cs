@@ -47,7 +47,10 @@ public class EndGame : MonoBehaviour
 
 	}
 	public void RestartButton(){
-		
 		SceneManager.LoadScene("inGame");
 	}
+	public void HomeButton(){
+		SceneManager.LoadScene("mainMenu");
+	}
+
 }
