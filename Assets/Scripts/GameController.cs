@@ -28,11 +28,11 @@ public class GameController : MonoBehaviour
         Debug.Log("speed : "+CircleSquare.speed);
 
         if(DestroyCircleSquare.endGame==false){
-            if(CircleSquare.speed<=12){
-                CircleSquare.speed += CircleSquare.speed* 0.001f;
+            if(CircleSquare.speed<=10){
+                CircleSquare.speed += CircleSquare.speed* 0.0005f;
                 spawnWait -= spawnWait * 0.0005f;
             }else{
-                CircleSquare.speed = 12;
+                CircleSquare.speed = 10;
                 spawnWait = 0.3f;
             }
         }else{
@@ -43,12 +43,12 @@ public class GameController : MonoBehaviour
     IEnumerator SpawnObjects(){
         yield return new WaitForSeconds(startWait);
         while(true){
-            for (int i=0; i<50; i++){
+            for (int i=0; i<5; i++){
                 float RedXpos = -XPosition[Random.Range(0,XPosition.Length)];
                 Vector3 RedPos = new Vector3(RedXpos,10,0);
                 Red = RedGO[Random.Range(0,RedGO.Length)] as GameObject;
                 Instantiate(Red, RedPos, Quaternion.identity);
-                yield return new WaitForSeconds(spawnWait);
+                yield return new WaitForSeconds(spawnWait*0.5f);
 
                 float BlueXpos = XPosition[Random.Range(0,XPosition.Length)];
                 Vector3 BluePos = new Vector3(BlueXpos,10,0);
