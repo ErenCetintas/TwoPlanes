@@ -23,7 +23,7 @@ public class mainMenuController : MonoBehaviour
         SceneManager.LoadScene("inGame");
         Debug.Log("--------------------------------------------");
     }
-    public void PauseButton(){
+    public void pauseButton(){
         if(isPaused){
             Time.timeScale = 1;
             isPaused = false;
@@ -36,7 +36,7 @@ public class mainMenuController : MonoBehaviour
         }        
         
     }
-    void exitButton() {
+    public void exitButton(){
      Application.Quit();
     }
 
