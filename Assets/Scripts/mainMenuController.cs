@@ -36,5 +36,8 @@ public class mainMenuController : MonoBehaviour
         }        
         
     }
+    void exitButton() {
+     Application.Quit();
+    }
 
 }
