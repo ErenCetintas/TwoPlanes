@@ -52,6 +52,7 @@ public class DestroyCircleSquare : MonoBehaviour
                 Instantiate(endGameEffect, new Vector3(transform.position.x,transform.position.y,transform.position.z), transform.rotation);
                 endGame=true;
                 Time.timeScale=0;
+                FindObjectOfType<soundManager>().Play("Destroy");
             }
         
     }
@@ -63,6 +64,7 @@ public class DestroyCircleSquare : MonoBehaviour
                 Destroy(objectToDestroy,1);
                 endGame=true;
                 Time.timeScale=0;
+                FindObjectOfType<soundManager>().Play("Destroy");
             }
             if(this.gameObject.tag == "BlueSquare"){
                 Destroy(this.gameObject);
@@ -70,6 +72,7 @@ public class DestroyCircleSquare : MonoBehaviour
                 Destroy(objectToDestroy,1);
                 endGame=true;
                 Time.timeScale=0;
+                FindObjectOfType<soundManager>().Play("Destroy");
             }
             //get points counter---------
             if(this.gameObject.tag == "CircleRed"){
@@ -78,6 +81,7 @@ public class DestroyCircleSquare : MonoBehaviour
                 Destroy(objectToDestroy,1);
                 //get points----
                 ScoreManager.score = ScoreManager.score + 1;
+                FindObjectOfType<soundManager>().Play("Circle");
             }
             if(this.gameObject.tag == "CircleBlue"){
                 Destroy(this.gameObject);
@@ -85,6 +89,7 @@ public class DestroyCircleSquare : MonoBehaviour
                 Destroy(objectToDestroy,1);
                 //get points----
                 ScoreManager.score = ScoreManager.score + 1;
+                FindObjectOfType<soundManager>().Play("Circle");
             }
         
     }
