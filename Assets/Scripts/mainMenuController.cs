@@ -22,6 +22,8 @@ public class mainMenuController : MonoBehaviour
     public void playButton(){
         SceneManager.LoadScene("inGame");
         Debug.Log("--------------------------------------------");
+        //plane sound
+        FindObjectOfType<soundManager>().Play("Plane");
     }
     public void pauseButton(){
         if(isPaused){

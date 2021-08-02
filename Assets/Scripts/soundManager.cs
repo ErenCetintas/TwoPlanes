@@ -33,7 +33,7 @@ public class soundManager : MonoBehaviour
     }
 
     void Start(){ 
-        Play("MainTheme");   
+        Play("Theme");   
     }
     
     public void Play (string name){
@@ -47,7 +47,7 @@ public class soundManager : MonoBehaviour
     public void Stop (string name){
         sound s = Array.Find(sounds, sound => sound.name == name);
         if(s==null){
-
+            Debug.Log("Sound:" + name + " not found!");
             return;
         }
         s.source.Stop();
