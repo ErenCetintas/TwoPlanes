@@ -39,7 +39,10 @@ public class mainMenuController : MonoBehaviour
         
     }
     public void exitButton(){
-     Application.Quit();
+         Application.Quit();
+    }
+    public void DantGamesPage(){
+         Application.OpenURL("https://play.google.com/store/apps/dev?id=7505620708147092978");
     }
 
 }
