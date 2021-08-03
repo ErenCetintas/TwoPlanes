@@ -27,7 +27,10 @@ public class EndGame : MonoBehaviour
 	{
         if(DestroyCircleSquare.endGame == true){
 			endGameScores();
-		}
+			FindObjectOfType<soundManager>().Stop("Plane");
+		}else{
+			FindObjectOfType<soundManager>().Play("Plane");
+			}
 	}
 	public void endGameScores(){
 		//endGameCanvas controller
@@ -42,9 +45,6 @@ public class EndGame : MonoBehaviour
 		//text scores
 		scoreText.text = "" + ScoreManager.score;
 		bestText.text = "" + bestScore;
-
-		
-
 	}
 	public void RestartButton(){
 		SceneManager.LoadScene("inGame");
