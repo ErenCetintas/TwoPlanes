@@ -15,7 +15,7 @@ public class DestroyCircleSquare : MonoBehaviour
     public static bool endGame;
 
     void Start(){
-        endGame=false;
+        endGame = false;
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -91,6 +91,5 @@ public class DestroyCircleSquare : MonoBehaviour
                 ScoreManager.score = ScoreManager.score + 1;
                 FindObjectOfType<soundManager>().Play("Circle");
             }
-        
     }
 }

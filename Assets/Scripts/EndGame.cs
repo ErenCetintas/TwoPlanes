@@ -6,14 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-
 	public Text scoreText;
 	public Text bestText;
-
 	public int bestScore;
-
 	public GameObject endGameCanvas;
-
 	// Start is called before the first frame update
 	void Start ()
 	{	
@@ -27,10 +23,8 @@ public class EndGame : MonoBehaviour
 	{
         if(DestroyCircleSquare.endGame == true){
 			endGameScores();
-			FindObjectOfType<soundManager>().Stop("Plane");
-		}else{
-			FindObjectOfType<soundManager>().Play("Plane");
-			}
+			
+		}
 	}
 	public void endGameScores(){
 		//endGameCanvas controller
@@ -41,7 +35,6 @@ public class EndGame : MonoBehaviour
 		}
 		//get best score
 		bestScore = PlayerPrefs.GetInt("bestScore");
-
 		//text scores
 		scoreText.text = "" + ScoreManager.score;
 		bestText.text = "" + bestScore;
@@ -52,5 +45,4 @@ public class EndGame : MonoBehaviour
 	public void HomeButton(){
 		SceneManager.LoadScene("mainMenu");
 	}
-
 }

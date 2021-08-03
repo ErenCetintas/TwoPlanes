@@ -13,17 +13,18 @@ public class mainMenuController : MonoBehaviour
     void Start()
     {
         PausedText.SetActive(false);   
+        if(AudioListener.pause == false){
+            muteButtonImage.SetActive(true);
+        }else{
+            muteButtonImage.SetActive(false); 
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         //check mute
-        if(AudioListener.pause == false){
-            muteButtonImage.SetActive(true);
-        }else{
-            muteButtonImage.SetActive(false); 
-        }
+        
     }
     public void playButton(){
         SceneManager.LoadScene("inGame");

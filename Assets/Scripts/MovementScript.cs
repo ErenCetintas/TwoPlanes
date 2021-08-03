@@ -12,7 +12,7 @@ public class MovementScript : MonoBehaviour
 
     public GameObject touchPlaneEffect;
     
-    float rotZ=15;
+    float rotZ = 15;  
 
     void Start()
     {
