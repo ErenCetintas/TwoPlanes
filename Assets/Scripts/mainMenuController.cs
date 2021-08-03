@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class mainMenuController : MonoBehaviour
 {   
+    public GameObject muteButtonImage;
     public GameObject PausedText;
     bool isPaused = false;
     
@@ -11,13 +12,18 @@ public class mainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PausedText.SetActive(false);
+        PausedText.SetActive(false);   
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //check mute
+        if(AudioListener.pause == false){
+            muteButtonImage.SetActive(true);
+        }else{
+            muteButtonImage.SetActive(false); 
+        }
     }
     public void playButton(){
         SceneManager.LoadScene("inGame");
@@ -43,6 +49,10 @@ public class mainMenuController : MonoBehaviour
     }
     public void DantGamesPage(){
          Application.OpenURL("https://play.google.com/store/apps/dev?id=7505620708147092978");
+    }
+    public void Mute(){
+        AudioListener.pause =! AudioListener.pause;
+               
     }
 
 }
