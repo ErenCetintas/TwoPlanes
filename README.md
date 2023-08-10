@@ -7,15 +7,21 @@ Hey there! So, I've whipped up this little game called "Two Planes." It's all ab
 What's Inside:
 
 Double Trouble Flying: You're the master of two planes at once. It's like patting your head and rubbing your tummy – but with planes.
+
 Game On, Reflexes: So, you gotta dodge obstacles to score points. It's like an obstacle course in the sky.
+
 Eye Candy Graphics: I made sure the game looks smooth and sleek, with those classic 2D vibes. Trust me, your eyes will thank you.
+
 Keep It Rollin': The game keeps going forever. Endless fun, my friend.
+
 Phone-Friendly: Oh, and I've made sure it's a blast to play on your phone. Perfect for those moments when you're waiting for a friend or chilling on a lazy Sunday.
 
 How to Pilot:
 
 Tap the left side to steer the right plane.
+
 Tap the right side to steer the right plane.
+
 Slip your planes through the gaps between obstacles.
 
 Behind the Scenes:
